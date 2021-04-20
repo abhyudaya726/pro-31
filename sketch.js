@@ -19,6 +19,27 @@ function setup(){
     world = engine.world;
 
     ground = new Ground(200,550,400,10);
+    
+    for(var i = 0; i<= width ; i+=80){
+        division.push(new Division(i,405,10,divheight));
+    }
+    
+    for(var k = 40; k<=width; k+=50){
+        plinko.push(new Plinko(k,75));
+    }
+    
+    for(var m = 15; m<=width; m+=50){
+        plinko.push(new Plinko(m,125));
+    }
+    
+    for(var o = 40; o<=width; o+=50){
+        plinko.push(new Plinko(o,175));
+    }
+    
+    for(var q = 15; q<=width; q+=50){
+        plinko.push(new Plinko(q,225));
+    }
+    
 }
 
 function draw(){
@@ -30,38 +51,28 @@ function draw(){
     ground.display();
     spawnPartical();
 
-    for(var i = 0; i<= width ; i+=80){
-        division.push(new Division(i,405,10,divheight));
-    }
+    
     for(var j = 0; j<division.length; j++){
         division[j].display();
     }
 
     
-    for(var k = 40; k<=width; k+=50){
-        plinko.push(new Plinko(k,75));
-    }
+    
     for(var l = 0; l<plinko.length; l++){
         plinko[l].display();
     }
     
-    for(var m = 15; m<=width; m+=50){
-        plinko.push(new Plinko(m,125));
-    }
+    
     for(var n = 0; n<plinko.length; n++){
         plinko[n].display();
     }
 
-    for(var o = 40; o<=width; o+=50){
-        plinko.push(new Plinko(o,175));
-    }
+    
     for(var p = 0; p<plinko.length; p++){
         plinko[p].display();
     }
     
-    for(var q = 15; q<=width; q+=50){
-        plinko.push(new Plinko(q,225));
-    }
+    
     for(var r = 0; r<plinko.length; r++){
         plinko[r].display();
     }
